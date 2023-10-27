@@ -4,8 +4,7 @@
   "info": {
     "singularName": "restaurant",
     "pluralName": "restaurants",
-    "displayName": "Restaurant",
-    "description": ""
+    "displayName": "Restaurant"
   },
   "options": {
     "draftAndPublish": true
@@ -13,10 +12,16 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
-    "Description": {
-      "type": "blocks"
+    "founded": {
+      "type": "datetime",
+      "unique": false,
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }

@@ -368,14 +368,14 @@ export interface ApiRestaurantRestaurant extends Schema.CollectionType {
     singularName: 'restaurant';
     pluralName: 'restaurants';
     displayName: 'Restaurant';
-    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
-    Description: Attribute.Blocks;
+    name: Attribute.String & Attribute.Required;
+    founded: Attribute.DateTime & Attribute.Required;
+    description: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
